@@ -1,0 +1,195 @@
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.edu-item {
+    display: flex;
+    gap: var(--space-6);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-6);
+    transition: border-color var(--transition), box-shadow var(--transition);
+    align-items: flex-start;
+    min-width: 0;
+}
+
+.edu-item:hover {
+    border-color: var(--color-primary-40);
+    box-shadow: var(--shadow-card);
+}
+
+.edu-logo {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    background: var(--palette-slate-50);
+    border: 1px solid var(--color-border);
+    padding: 0.6rem;
+    overflow: hidden;
+}
+
+.edu-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.edu-logo-school {
+    background: var(--color-primary-10);
+    color: var(--color-primary);
+    font-size: 1.8rem;
+    border-color: var(--color-primary-20);
+}
+
+.edu-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.edu-title {
+    font-size: var(--fs-xl);
+    color: var(--color-text);
+    margin-bottom: var(--space-2);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-3);
+    line-height: 1.3;
+}
+
+.edu-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-full);
+    background: var(--color-success-12);
+    color: var(--color-success);
+    border: 1px solid var(--color-success-30);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.edu-badge-graduated {
+    background: var(--color-success-12);
+    color: var(--color-success);
+    border-color: var(--color-success-35);
+}
+
+.edu-subtitle {
+    font-size: var(--fs-md);
+    color: var(--color-text-muted);
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.edu-date {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-4);
+}
+
+.edu-achievements {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: var(--space-2);
+}
+
+.edu-achievements li {
+    position: relative;
+    padding-left: 1.5rem;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.edu-achievements li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+/* Perfil de egreso (Details / Summary) */
+.edu-details {
+    margin-top: var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-black-20);
+    overflow: hidden;
+}
+
+.edu-details summary {
+    cursor: pointer;
+    padding: var(--space-3) var(--space-4);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    user-select: none;
+    list-style: none;
+    transition: background var(--transition);
+}
+
+.edu-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.edu-details summary:hover {
+    background: var(--color-primary-08);
+}
+
+.edu-details[open] summary {
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-primary-08);
+}
+
+.edu-profile {
+    list-style: none;
+    margin: 0;
+    padding: var(--space-4) var(--space-5);
+    display: grid;
+    gap: 0.6rem;
+    counter-reset: profile;
+}
+
+.edu-profile li {
+    position: relative;
+    padding-left: 1.9rem;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    line-height: 1.55;
+    counter-increment: profile;
+}
+
+.edu-profile li::before {
+    content: counter(profile) ".";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    width: 1.5rem;
+}

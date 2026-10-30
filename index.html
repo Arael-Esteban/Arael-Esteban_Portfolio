@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0e17">
+    <meta name="author" content="anabalonarael@gmail.com">
+    <meta name="description"
+        content="Portafolio de Arael Anabalón. Desarrollador Full-Stack Junior especializado en Python, Flask (MVC), SQL y desarrollo frontend.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Arael Anabalón | Portafolio Web">
+    <meta property="og:description"
+        content="Desarrollador Full-Stack Junior. Soluciones eficientes en backend con Python y Flask.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tudominio.com">
+    <meta property="og:image" content="resources/img/preview.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Arael Anabalón | Portafolio Web">
+    <meta name="twitter:description"
+        content="Desarrollador Full-Stack Junior especializado en Python, Flask y desarrollo frontend.">
+    <title>Arael Anabalón | Portafolio Web</title>
+
+    <!-- Preconnect para optimizar la carga de fuentes e iconos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+    <!-- Fuentes -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Favicon y Estilos Principales -->
+    <link rel="icon" type="image/png" href="resources/img/favicon.png">
+    <link rel="stylesheet" href="resources/css/main.css">
+</head>
+
+<body>
+    <a href="#main" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container" aria-label="Navegación principal">
+            <a href="#hero" class="nav-logo" aria-label="Arael Anabalón - Inicio">
+                <span class="logo-bracket"><i class="bi bi-code-slash"></i></span>
+                <span class="logo-name">Arael Anabalón</span>
+            </a>
+            <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#about" class="nav-link"><i class="bi bi-person" aria-hidden="true"></i> <span>Sobre
+                            mí</span></a></li>
+                <li><a href="#education" class="nav-link"><i class="bi bi-mortarboard" aria-hidden="true"></i>
+                        <span>Educación</span></a></li>
+                <li><a href="#skills" class="nav-link"><i class="bi bi-stack" aria-hidden="true"></i>
+                        <span>Habilidades</span></a></li>
+
+                <!-- Nuevo acordeón de Proyectos -->
+                <li class="nav-dropdown">
+                    <a href="#projects" class="nav-link">
+                        <i class="bi bi-folder2-open" aria-hidden="true"></i>
+                        <span>Proyectos</span>
+                        <i class="bi bi-chevron-down nav-dropdown-icon"></i>
+                    </a>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="#project-headsafe">HeadSafe</a></li>
+                        <li><a href="#project-politicore">PolitiCore</a></li>
+                        <li><a href="#project-cinepedia">CinePedia</a></li>
+                        <li><a href="#project-feria">Feria TP 2026</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#contact" class="nav-link"><i class="bi bi-envelope" aria-hidden="true"></i>
+                        <span>Contacto</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <!-- HERO -->
+        <section class="hero" id="hero">
+            <div class="hero-container container">
+                <div class="hero-text">
+                    <h1 class="hero-title">Arael Anabalón</h1>
+                    <h2 class="hero-subtitle">
+                        <span class="typed-text" aria-live="polite"></span>
+                        <span class="cursor" aria-hidden="true">|</span>
+                    </h2>
+                    <p class="hero-description">
+                        Desarrollador Full-Stack Junior apasionado por crear soluciones eficientes.
+                        Especializado en <strong>Python</strong>, <strong>Flask (MVC)</strong> y <strong>SQL</strong>
+                        en el backend, combinado con interfaces modernas en el frontend.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="bi bi-code-square" aria-hidden="true"></i> Ver proyectos
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i class="bi bi-send" aria-hidden="true"></i> Contactarme
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 1: Quién soy -->
+        <section class="about-hero section" id="about">
+            <div class="container">
+                <div class="about-row reveal">
+                    <div class="about-row-text">
+                        <div class="section-header">
+                            <h2 class="section-title">Quién soy</h2>
+                            <p class="section-subtitle">Conóceme un poco más allá del código.</p>
+                        </div>
+                        <p>
+                            Soy <strong>Arael Anabalón</strong>, desarrollador
+                            <strong>Full-Stack Junior</strong>. Me apasiona el código:
+                            aprender nuevos lenguajes, resolver problemas con lógica y buscar
+                            siempre la <strong>eficiencia</strong> y la
+                            <strong>sofisticación</strong> detrás de un buen código.
+                        </p>
+                    </div>
+                    <div class="about-row-visual">
+                        <div class="about-photo">
+                            <img src="resources/img/Arael_A.jpeg" alt="Arael Anabalón" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: Mis inicios -->
+        <section class="about-early section" id="inicios">
+            <div class="container">
+                <div class="about-row about-row-reverse reveal">
+                    <div class="about-row-text">
+                        <div class="section-header">
+                            <h2 class="section-title">Mis inicios</h2>
+                            <p class="section-subtitle">Dónde empezó todo.</p>
+                        </div>
+                        <p>
+                            Desde siempre me ha gustado la tecnología. Llegué a la
+                            programación con las ideas claras: siempre quise entender cómo
+                            funcionan todas esas cosas digitales que hoy damos por sentadas.
+                            Mi primer paso formal fue en el
+                            <strong>Liceo Comercial Vate Vicente Huidobro</strong>, en
+                            <strong>Santiago de Chile</strong>, en la especialidad de
+                            Programación. Ahí entendí que no solo se trataba de escribir
+                            código, sino de pensar la solución antes de teclearla. Hoy estoy
+                            feliz de seguir avanzando en este mundo que me interesó desde el
+                            principio.
+                        </p>
+                    </div>
+                    <div class="about-row-visual">
+                        <div class="about-deco about-deco-school">
+                            <i class="bi bi-mortarboard-fill" aria-hidden="true"></i>
+                            <span>Liceo Bicentenario<br>Comercial Vate Vicente Huidobro</span>
+                            <span class="about-deco-location">Santiago de Chile</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: Mi primer bootcamp -->
+        <section class="about-bootcamp section" id="bootcamp">
+            <div class="container">
+                <div class="about-row reveal">
+                    <div class="about-row-text">
+                        <div class="section-header">
+                            <h2 class="section-title">Mi primer bootcamp</h2>
+                            <p class="section-subtitle">Dos años de formación intensiva en desarrollo.</p>
+                        </div>
+                        <p>
+                            En 3° medio el liceo implementó el programa Skillnest (ex Coding Dojo) de la nada.
+                            Nunca pensé en unirme a un bootcamp, pero la experiencia me maravilló.
+                            Ahí inicié los <strong>Fundamentos Web</strong> en 2025 y concluí mi
+                            formación en <strong>FullStack Python</strong> en 2026. Fue tal el
+                            impacto que hoy tengo claro que quiero seguir aprendiendo nuevas
+                            tecnologías en futuros bootcamps.
+                        </p>
+                    </div>
+                    <div class="about-row-visual">
+                        <div class="about-timeline">
+                            <div class="about-timeline-block">
+                                <span class="about-timeline-label">
+                                    <i class="bi bi-1-circle-fill" aria-hidden="true"></i>
+                                    3° Medio · 2025
+                                </span>
+                                <ul class="about-timeline-icons">
+                                    <li><i class="devicon-html5-plain colored" title="HTML5"></i></li>
+                                    <li><i class="devicon-css3-plain colored" title="CSS3"></i></li>
+                                    <li><i class="devicon-bootstrap-plain colored" title="Bootstrap"></i></li>
+                                    <li><i class="devicon-javascript-plain colored" title="JavaScript"></i></li>
+                                    <li><i class="devicon-git-plain colored" title="Git"></i></li>
+                                </ul>
+                            </div>
+                            <div class="about-timeline-block">
+                                <span class="about-timeline-label">
+                                    <i class="bi bi-2-circle-fill" aria-hidden="true"></i>
+                                    3° Medio · 2025
+                                </span>
+                                <ul class="about-timeline-icons">
+                                    <li><i class="devicon-mysql-plain colored" title="MySQL"></i></li>
+                                    <li><i class="devicon-github-original" title="GitHub"></i></li>
+                                </ul>
+                            </div>
+                            <div class="about-timeline-block">
+                                <span class="about-timeline-label">
+                                    <i class="bi bi-3-circle-fill" aria-hidden="true"></i>
+                                    4° Medio · 2026
+                                </span>
+                                <ul class="about-timeline-icons">
+                                    <li><i class="devicon-python-plain colored" title="Python"></i></li>
+                                    <li><i class="devicon-flask-original" title="Flask"></i></li>
+                                    <li><i class="devicon-mysql-plain colored" title="MySQL"></i></li>
+                                    <li><i class="devicon-jinja-original" title="Jinja2"></i></li>
+                                    <li><i class="bi bi-diagram-3" title="MVC"></i></li>
+                                </ul>
+                            </div>
+                            <div class="about-timeline-block">
+                                <span class="about-timeline-label">
+                                    <i class="bi bi-4-circle-fill" aria-hidden="true"></i>
+                                    4° Medio · 2026
+                                </span>
+                                <ul class="about-timeline-icons">
+                                    <li><i class="bi bi-cloud-check" title="AJAX"></i></li>
+                                    <li><i class="devicon-amazonwebservices-plain-wordmark colored" title="AWS"></i>
+                                    </li>
+                                    <li><i class="bi bi-cloud-arrow-up" title="Render"></i></li>
+                                    <li><i class="devicon-railway-original" title="Railway"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: Hoy -->
+        <section class="about-now section" id="hoy">
+            <div class="container">
+                <div class="about-row about-row-reverse reveal">
+                    <div class="about-row-text">
+                        <div class="section-header">
+                            <h2 class="section-title">Hoy</h2>
+                            <p class="section-subtitle">Mi enfoque actual y lo que estoy aprendiendo.</p>
+                        </div>
+                        <p>
+                            Trabajo con <strong>Python</strong>, <strong>Flask (MVC)</strong> y
+                            <strong>SQL</strong> en el backend, <strong>HTML, CSS y JavaScript</strong>
+                            en el frontend, y despliego mis proyectos en <strong>Render</strong>.
+                            Actualmente estoy aprendiendo <strong>React</strong>,
+                            <strong>React Native</strong>, <strong>TypeScript</strong> y el
+                            consumo de <strong>APIs con Postman</strong>.
+                        </p>
+                        <p style="margin-top: var(--space-4);">
+                            <a href="https://github.com/Arael-Esteban" target="_blank" rel="noopener"
+                                class="btn btn-outline" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">
+                                <i class="bi bi-github" aria-hidden="true"></i> Ver mi perfil de GitHub
+                            </a>
+                        </p>
+                    </div>
+                    <div class="about-row-visual">
+                        <!-- Tarjeta de estadísticas de GitHub -->
+                        <div class="github-stats-card">
+                            <a href="https://github.com/Arael-Esteban" target="_blank" rel="noopener"
+                                aria-label="Estadísticas de GitHub de Arael Anabalón">
+                                <img src="https://github-readme-stats.vercel.app/api?username=TU-USUARIO&show_icons=true&theme=transparent&hide_border=true&title_color=38bdf8&text_color=94a3b8&icon_color=a78bfa&bg_color=1a2332&locale=es"
+                                    alt="Estadísticas de GitHub de Arael Anabalón" loading="lazy" width="467"
+                                    height="195">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCACIÓN -->
+        <section class="education section" id="education">
+            <div class="container">
+                <div class="section-header center reveal">
+                    <h2 class="section-title">Educación</h2>
+                    <p class="section-subtitle">Mi formación técnica y certificaciones oficiales.</p>
+                </div>
+
+                <div class="education-list">
+                    <!-- Skillnest -->
+                    <article class="edu-item reveal">
+                        <div class="edu-logo">
+                            <img src="resources/img/skillnesteducation_logo.jpeg" alt="Skillnest" loading="lazy">
+                        </div>
+                        <div class="edu-content">
+                            <h3 class="edu-title">Skillnest Bootcamp <span class="edu-badge"><i
+                                        class="bi bi-patch-check-fill"></i> Certificado</span></h3>
+                            <p class="edu-subtitle">FullStack Python Junior</p>
+                            <p class="edu-date">Skillnest (ex Coding Dojo) | 2025 - 2026</p>
+                            <ul class="edu-achievements">
+                                <li>Certificación oficial en desarrollo FullStack con Python y Flask.</li>
+                                <li>Construcción de aplicaciones web bajo el patrón arquitectónico MVC.</li>
+                                <li>Gestión de bases de datos relacionales con MySQL y PyMySQL.</li>
+                                <li>Despliegue de proyectos en la nube usando AWS, Render y Railway.</li>
+                                <li>Integración de frontend dinámico con Jinja2, AJAX y Bootstrap 5.</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <!-- VVH -->
+                    <article class="edu-item reveal">
+                        <div class="edu-logo edu-logo-school">
+                            <img src="resources/img/vvh.png" alt="">
+                        </div>
+                        <div class="edu-content">
+                            <h3 class="edu-title">Educación Media Técnico-Profesional <span
+                                    class="edu-badge edu-badge-graduated"><i class="bi bi-check-circle-fill"></i>
+                                    Finalizado</span></h3>
+                            <p class="edu-subtitle">Especialidad en Computación</p>
+                            <p class="edu-date">Liceo Bicentenario Comercial Vate Vicente Huidobro | Egresado 2026</p>
+                            <details class="edu-details">
+                                <summary>
+                                    <i class="bi bi-list-check" aria-hidden="true"></i>
+                                    Ver Perfil de Egreso PEI
+                                </summary>
+                                <ul class="edu-profile">
+                                    <li>Desarrollar programas y rutinas de baja y mediana complejidad con estructuras y
+                                        bases de datos según requerimientos de la empresa.</li>
+                                    <li>Instalar sistemas de información manufacturados para obtener la información
+                                        necesaria según requerimientos.</li>
+                                    <li>Desarrollar aplicaciones y rutinas para el mantenimiento y actualización de
+                                        bases de datos.</li>
+                                    <li>Construir aplicaciones computacionales basadas en programación orientada a
+                                        objetos (POO).</li>
+                                    <li>Desarrollar aplicaciones web con los lenguajes de programación disponibles en el
+                                        mercado, administrando y publicando información en internet.</li>
+                                    <li>Implementar planes de mantención preventiva y correctiva de software.</li>
+                                    <li>Dar soporte técnico a usuarios de sistemas computacionales, local o remoto.</li>
+                                    <li>Instalar y actualizar hardware y software en una organización.</li>
+                                    <li>Instalar y configurar sistemas operativos en equipos personales para
+                                        incorporarlos a una red LAN bajo estándares de calidad y seguridad.</li>
+                                    <li>Instalar software de productividad y programas utilitarios según requerimientos.
+                                    </li>
+                                </ul>
+                            </details>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- HABILIDADES -->
+        <section class="skills section" id="skills">
+            <div class="container">
+                <div class="section-header center reveal">
+                    <h2 class="section-title">Habilidades</h2>
+                    <p class="section-subtitle">Las herramientas y tecnologías que utilizo a diario.</p>
+                </div>
+
+                <div class="skills-grid reveal">
+                    <!-- Backend -->
+                    <div class="skill-card">
+                        <div class="skill-card-header">
+                            <i class="bi bi-server" aria-hidden="true"></i>
+                            <h3>Backend</h3>
+                        </div>
+                        <div class="skill-icons">
+                            <i class="devicon-python-plain colored" aria-label="Python"></i>
+                            <i class="devicon-flask-original" aria-label="Flask"></i>
+                            <i class="devicon-mysql-plain colored" aria-label="MySQL"></i>
+                            <i class="bi bi-cloud-arrow-up" aria-label="APIs REST"></i>
+                        </div>
+                        <p class="skill-list">Python, Flask (MVC), SQL / MySQL, APIs REST</p>
+                    </div>
+
+                    <!-- Frontend -->
+                    <div class="skill-card">
+                        <div class="skill-card-header">
+                            <i class="bi bi-window" aria-hidden="true"></i>
+                            <h3>Frontend</h3>
+                        </div>
+                        <div class="skill-icons">
+                            <i class="devicon-html5-plain colored" aria-label="HTML5"></i>
+                            <i class="devicon-css3-plain colored" aria-label="CSS3"></i>
+                            <i class="devicon-javascript-plain colored" aria-label="JavaScript"></i>
+                            <i class="devicon-bootstrap-plain colored" aria-label="Bootstrap"></i>
+                        </div>
+                        <p class="skill-list">HTML5, CSS3, JavaScript, Bootstrap 5, Responsive</p>
+                    </div>
+
+                    <!-- Herramientas -->
+                    <div class="skill-card">
+                        <div class="skill-card-header">
+                            <i class="bi bi-tools" aria-hidden="true"></i>
+                            <h3>Herramientas</h3>
+                        </div>
+                        <div class="skill-icons">
+                            <i class="devicon-git-plain colored" aria-label="Git"></i>
+                            <i class="devicon-vscode-plain colored" aria-label="VS Code"></i>
+                            <i class="devicon-figma-plain colored" aria-label="Figma"></i>
+                        </div>
+                        <p class="skill-list">Git / GitHub, VS Code, Figma</p>
+                    </div>
+
+                    <!-- Deployment -->
+                    <div class="skill-card">
+                        <div class="skill-card-header">
+                            <i class="bi bi-cloud-arrow-up" aria-hidden="true"></i>
+                            <h3>Deployment</h3>
+                        </div>
+                        <div class="skill-icons">
+                            <i class="devicon-amazonwebservices-plain-wordmark colored" aria-label="AWS"></i>
+                            <i class="bi bi-cloud-check" aria-label="Render"></i>
+                            <i class="devicon-railway-original" title="Railway"></i>
+                        </div>
+                        <p class="skill-list">AWS, Render, Railway</p>
+                    </div>
+
+                    <!-- En aprendizaje (Destacado) -->
+                    <div class="skill-card skill-card-learning">
+                        <div class="skill-card-header">
+                            <i class="bi bi-rocket-takeoff" aria-hidden="true"></i>
+                            <h3>En aprendizaje</h3>
+                        </div>
+                        <div class="skill-icons">
+                            <i class="devicon-react-original colored" aria-label="React"></i>
+                            <i class="devicon-react-original colored" aria-label="React Native"></i>
+                            <i class="devicon-typescript-plain colored" aria-label="TypeScript"></i>
+                            <i class="devicon-postman-plain colored" aria-label="Postman"></i>
+                        </div>
+                        <p class="skill-list">React, React Native, TypeScript, Postman</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROYECTOS -->
+        <section class="projects section" id="projects">
+            <div class="container">
+                <div class="section-header center reveal">
+                    <h2 class="section-title">Proyectos</h2>
+                    <p class="section-subtitle">Algunos de los trabajos que he construido.</p>
+                </div>
+
+                <div class="projects-list">
+
+                    <!-- Proyecto 1: HeadSafe -->
+                    <article class="project-card reveal" id="project-headsafe">
+                        <div class="project-info">
+                            <h3 class="project-name">HeadSafe <span class="project-tag">En desarrollo</span></h3>
+                            <p class="project-summary">
+                                Plataforma web enfocada en la seguridad y gestión de información crítica.
+                                Actualmente en fase de desarrollo.
+                            </p>
+                            <ul class="project-bullets">
+                                <li>Arquitectura backend con Python y Flask.</li>
+                                <li>Gestión de base de datos relacional.</li>
+                                <li>Enfoque en buenas prácticas de seguridad.</li>
+                                <li>Próximamente más detalles.</li>
+                            </ul>
+                        </div>
+                        <div class="project-media">
+                            <div class="project-visual">
+                                <video autoplay muted loop playsinline controls
+                                    poster="resources/img/headsafe-portada.png">
+                                    <source src="resources/video/headsafe-demo.mp4" type="video/mp4">
+                                    Tu navegador no soporta reproducción de video.
+                                </video>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" target="_blank" rel="noopener" aria-label="Ver repositorio en GitHub"><i
+                                        class="bi bi-github" aria-hidden="true"></i></a>
+                                <a href="#" target="_blank" rel="noopener" aria-label="Ver sitio en vivo"><i
+                                        class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+                                <a href="#" target="_blank" rel="noopener" aria-label="Ver demo en YouTube"><i
+                                        class="bi bi-youtube" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 2: PolitiCore -->
+                    <article class="project-card reveal" id="project-politicore">
+                        <div class="project-info">
+                            <h3 class="project-name">PolitiCore <span class="project-tag">En desarrollo</span></h3>
+                            <p class="project-summary">
+                                Sistema de gestión y análisis político. Actualmente en fase de desarrollo.
+                            </p>
+                            <ul class="project-bullets">
+                                <li>Desarrollo backend con Python.</li>
+                                <li>Estructuración de datos y lógica de negocio.</li>
+                                <li>Interfaz de usuario en construcción.</li>
+                                <li>Próximamente más detalles.</li>
+                            </ul>
+                        </div>
+                        <div class="project-media">
+                            <div class="project-visual">
+                                <video autoplay muted loop playsinline controls
+                                    poster="resources/img/politicore-portada.png">
+                                    <source src="resources/video/politicore-demo.mp4" type="video/mp4">
+                                    Tu navegador no soporta reproducción de video.
+                                </video>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" target="_blank" rel="noopener" aria-label="Ver repositorio en GitHub"><i
+                                        class="bi bi-github" aria-hidden="true"></i></a>
+                                <a href="#" target="_blank" rel="noopener" aria-label="Ver sitio en vivo"><i
+                                        class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+                                <a href="#" target="_blank" rel="noopener" aria-label="Ver demo en YouTube"><i
+                                        class="bi bi-youtube" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 3: CinePedia (Certificación) -->
+                    <article class="project-card reveal" id="project-cinepedia">
+                        <div class="project-info">
+                            <h3 class="project-name">CinePedia <span class="project-tag">Certificación</span></h3>
+                            <p class="project-summary">
+                                Aplicación web para la gestión y registro de películas desarrollada bajo el
+                                patrón arquitectónico <strong>MVC</strong>. Proyecto con el que obtuve mi
+                                certificación <strong>FullStack Python Junior</strong> en Skillnest.
+                            </p>
+                            <ul class="project-bullets">
+                                <li>Flask como microframework principal.</li>
+                                <li>Jinja2 para renderización dinámica.</li>
+                                <li>Flask-Bcrypt para encriptación de contraseñas.</li>
+                                <li>PyMySQL para conexión con MySQL.</li>
+                                <li>Bootstrap 5 local para el diseño visual.</li>
+                            </ul>
+                        </div>
+                        <div class="project-media">
+                            <div class="project-visual">
+                                <video autoplay muted loop playsinline controls
+                                    poster="resources/img/cinepedia-portada.png">
+                                    <source src="resources/video/cinepedia-demo.mp4" type="video/mp4">
+                                    Tu navegador no soporta reproducción de video.
+                                </video>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/TU-USUARIO/cinepedia" target="_blank" rel="noopener"
+                                    aria-label="Ver repositorio en GitHub"><i class="bi bi-github"
+                                        aria-hidden="true"></i></a>
+                                <a href="https://cinepedia.onrender.com" target="_blank" rel="noopener"
+                                    aria-label="Ver sitio en vivo"><i class="bi bi-box-arrow-up-right"
+                                        aria-hidden="true"></i></a>
+                                <a href="https://youtube.com/watch?v=TU-VIDEO" target="_blank" rel="noopener"
+                                    aria-label="Ver demo en YouTube"><i class="bi bi-youtube"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 4: Portafolio Programación Feria TP -->
+                    <article class="project-card reveal" id="project-feria">
+                        <div class="project-info">
+                            <h3 class="project-name">Portafolio Programación <span class="project-tag">Feria TP
+                                    2026</span></h3>
+                            <p class="project-summary">
+                                Sitio web desarrollado para la <strong>especialidad de Programación</strong> de mi
+                                liceo, presentado en la <strong>Feria Técnico Profesional</strong>. Muestra el
+                                entorno de la especialidad y una galería navegable y filtrable con los
+                                <strong>proyectos de innovación</strong> creados por los estudiantes.
+                            </p>
+                            <ul class="project-bullets">
+                                <li>Presentación del entorno de la especialidad.</li>
+                                <li>Galería de proyectos de innovación estudiantiles.</li>
+                                <li>Navegación y filtrado dinámico entre proyectos.</li>
+                                <li>Diseño responsive para exposición en feria.</li>
+                            </ul>
+                        </div>
+                        <div class="project-media">
+                            <div class="project-visual">
+                                <video autoplay muted loop playsinline controls
+                                    poster="resources/img/feria-portada.png">
+                                    <source src="resources/video/feria-demo.mp4" type="video/mp4">
+                                    Tu navegador no soporta reproducción de video.
+                                </video>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/TU-USUARIO/portafolio-programacion" target="_blank"
+                                    rel="noopener" aria-label="Ver repositorio en GitHub"><i class="bi bi-github"
+                                        aria-hidden="true"></i></a>
+                                <a href="https://portafolio-programacion.onrender.com" target="_blank" rel="noopener"
+                                    aria-label="Ver sitio en vivo"><i class="bi bi-box-arrow-up-right"
+                                        aria-hidden="true"></i></a>
+                                <a href="https://youtube.com/watch?v=TU-VIDEO" target="_blank" rel="noopener"
+                                    aria-label="Ver demo en YouTube"><i class="bi bi-youtube"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="section-header center reveal">
+                    <h2 class="section-title">Contacto</h2>
+                    <p class="section-subtitle">Siéntete libre de contactarme cuando quieras. Ya sea por una idea, una
+                        propuesta o simplemente para conversar de código.</p>
+                </div>
+
+                <div class="contact-actions reveal">
+                    <a href="mailto:anabalonarael@gmail.com" class="btn btn-primary btn-large">
+                        <i class="bi bi-envelope-paper" aria-hidden="true"></i> Enviar mensaje
+                    </a>
+                </div>
+
+                <ul class="contact-social reveal" aria-label="Redes y currículum">
+                    <li>
+                        <a href="https://github.com/TU-USUARIO" target="_blank" rel="noopener" aria-label="GitHub">
+                            <i class="bi bi-github" aria-hidden="true"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com/in/TU-USUARIO" target="_blank" rel="noopener"
+                            aria-label="LinkedIn">
+                            <i class="bi bi-linkedin" aria-hidden="true"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:anabalonarael@gmail.com" aria-label="Email">
+                            <i class="bi bi-envelope" aria-hidden="true"></i>
+                            <span>Email</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="resources/pdf/CV-Arael-Anabalon.pdf" target="_blank" rel="noopener"
+                            aria-label="Currículum en PDF" class="contact-resume">
+                            <i class="bi bi-filetype-pdf" aria-hidden="true"></i>
+                            <span>Currículum</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Arael Anabalón. Todos los derechos reservados.</p>
+            <p class="footer-built">
+                <i class="bi bi-cup-hot" aria-hidden="true"></i>
+                Construido con dedicación y mucho café
+            </p>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">
+        <i class="bi bi-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <script src="resources/js/menu.js" defer></script>
+    <script src="resources/js/main.js" defer></script>
+</body>
+
+</html>
